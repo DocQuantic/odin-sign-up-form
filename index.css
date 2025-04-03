@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'dragonflyregular';
+    src: url('fonts/dragonfly-webfont.woff2') format('woff2'),
+         url('fonts/dragonfly-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +15,5 @@
 
 h1{
     color: bisque;
+    font-family: "dragonflyregular", serif;
 }
