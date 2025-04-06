@@ -7,6 +7,12 @@
 
 }
 
+:root{
+    --hero-color: rgb(255, 255, 255);
+    --form-color: rgb(243, 243, 243);
+    --input-border-color: rgb(224, 190, 167);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +21,7 @@
 
 html{
     font-size: 1.2em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body{
@@ -25,10 +31,22 @@ body{
     align-items: center;
 }
 
+input,
+button{
+    appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
 h1{
     color: white;
     font-family: "dragonflyregular", serif;
     font-size: 2.5rem;
+}
+
+h2{
+    padding: 1em 0;
+    background-color: var(--form-color);
 }
 
 .left-pane{
@@ -57,10 +75,85 @@ h1{
 .right-pane{
     height: 100%;
     width: 40%;
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.right-pane > div{
+    width: 100%;
+}
+
+.hero{
+    padding: 1.5em 3rem;
+}
+
+.hero{
+    background-color: var(--hero-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.hero > p{
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+}
+
+.form-body{
+    height: fit-content;
+}
+
+.form-body > h2,
+.form-body > form > ul{
+    padding: 1em 3rem;
+}
+
+form > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    background-color: var(--form-color);
+    padding-bottom: 2em;
+}
+
+form > ul > li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    flex: 1 0 40%;
+    > input{
+        border: 2px solid var(--input-border-color);
+        padding: 0.4em 0.2em;
+        border-radius: 5px;
+    }
+}
+
+.submit-area{
+    background-color: var(--hero-color);
+    padding: 1em 3rem;
+}
+
+.submit-area > button{
+    padding: 0.8em 2em;
+    border: 0;
+    border-radius: 10px;
+    margin-right: 1em;
+    background-color: rgb(224, 190, 167);
+}
+
+.submit-area > p{
+    height: fit-content;
+    align-self: center;
+    display: inline;
+}
+
+.submit-area > p > a{
+    text-decoration: none;
+    color: rgb(224, 190, 167);
+}
