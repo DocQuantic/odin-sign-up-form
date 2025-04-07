@@ -11,6 +11,8 @@
     --hero-color: rgb(255, 255, 255);
     --form-color: rgb(243, 243, 243);
     --input-border-color: rgb(224, 190, 167);
+    --input-invalid-color: brown;
+    --input-focus-color: rgb(190, 204, 158);
 }
 
 *{
@@ -108,9 +110,12 @@ h2{
     height: fit-content;
 }
 
-.form-body > h2,
+.form-body > h2{
+    padding: 1em 3rem 1em 3rem;
+}
+
 .form-body > form > ul{
-    padding: 1em 3rem;
+    padding: 1em 3rem 2.5em 3rem;
 }
 
 form > ul{
@@ -119,7 +124,6 @@ form > ul{
     flex-wrap: wrap;
     gap: 1em;
     background-color: var(--form-color);
-    padding-bottom: 2em;
 }
 
 form > ul > li{
@@ -134,9 +138,19 @@ form > ul > li{
     }
 }
 
+input:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px black;
+    border-color: var(--input-focus-color);
+}
+
+input[type="password"]:invalid{
+    border-color: var(--input-invalid-color);
+}
+
 .submit-area{
     background-color: var(--hero-color);
-    padding: 1em 3rem;
+    padding: 1.5em 3rem;
 }
 
 .submit-area > button{
@@ -144,7 +158,7 @@ form > ul > li{
     border: 0;
     border-radius: 10px;
     margin-right: 1em;
-    background-color: rgb(224, 190, 167);
+    background-color: var(--input-border-color);
 }
 
 .submit-area > p{
@@ -155,5 +169,5 @@ form > ul > li{
 
 .submit-area > p > a{
     text-decoration: none;
-    color: rgb(224, 190, 167);
+    color: var(--input-border-color);
 }
