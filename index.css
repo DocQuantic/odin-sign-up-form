@@ -174,3 +174,17 @@ input[type="password"]:invalid{
     text-decoration: none;
     color: var(--input-border-color);
 }
+
+.error-msg{
+    color: rgb(114, 0, 0);
+    background-color: red;
+    text-align: center;
+    width: 80%;
+    align-self: center;
+    border-radius: 5px;
+    /*display: none;*/
+}
+
+.active{
+    display: block;
+}

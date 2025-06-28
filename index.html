@@ -3,6 +3,7 @@
     <head lang="en">
         <link rel="stylesheet" href="index.css">
         <meta charset="UTF-8">
+        <script src="./index.js"  defer></script>
         <title>Sign-up Form</title>
     </head>
     <body>
@@ -21,31 +22,37 @@
             </div>
             <div class="form-body">
                 <h2>Let's do this!</h2>
-                <form action="" method="post">
+                <form action="" method="post" novalidate>
                     <ul>
                         <li>
                             <label for="first-name">First name</label>
-                            <input type="text" id="first-name" name="first-name" pattern="^\w+$">
+                            <input type="text" id="first-name" name="first-name" pattern="^[A-Za-z]+$" required>
+                            <p class="error-msg"></p>
                         </li>
                         <li>
                             <label for="last-name">Last name</label>
-                            <input type="text" id="last-name" name="last-name" pattern="^\w+$">
+                            <input type="text" id="last-name" name="last-name" pattern="^[A-Za-z]+$" required>
+                            <p class="error-msg"></p>
                         </li>
                         <li>
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" pattern="^[\w\.]+@[\w\.]+\.[a-z]+$" required>
+                            <p class="error-msg"></p>
                         </li>
                         <li>
                             <label for="phone">Phone number</label>
-                            <input type="tel" id="phone" name="phone-number" pattern="^\d+$" maxlength="13">
+                            <input type="tel" id="phone" name="phone-number" pattern="^0[0-9]{9}$" maxlength="10" required>
+                            <p class="error-msg"></p>
                         </li>
                         <li>
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" minlength="10" maxlength="30">
+                            <input type="password" id="password" name="password" pattern="^[\w\-_]{10,30}$" required>
+                            <p class="error-msg"></p>
                         </li>
                         <li>
                             <label for="password-confirm">Confirm password</label>
-                            <input type="password" id="password-confirm" name="password-confirm" minlength="10" maxlength="30">
+                            <input type="password" id="password-confirm" name="password-confirm" pattern="^[\w\-_]{10,30}$" required>
+                            <p class="error-msg"></p>
                         </li>
                     </ul>
 
